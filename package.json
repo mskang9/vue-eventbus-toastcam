@@ -13,7 +13,7 @@
   "keywords": [
     "eventbus"
   ],
-  "author": "mskang9",
+  "author": "mskang9 <minsgiman@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mskang9/vue-eventbus-toastcam/issues"
