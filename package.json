@@ -1,0 +1,22 @@
+{
+  "name": "vue-eventbus-toastcam",
+  "version": "1.0.0",
+  "description": "eventbus",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mskang9/vue-eventbus-toastcam.git"
+  },
+  "keywords": [
+    "eventbus"
+  ],
+  "author": "mskang9",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mskang9/vue-eventbus-toastcam/issues"
+  },
+  "homepage": "https://github.com/mskang9/vue-eventbus-toastcam#readme"
+}
