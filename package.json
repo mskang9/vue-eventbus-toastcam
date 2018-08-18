@@ -1,6 +1,6 @@
 {
   "name": "vue-eventbus-toastcam",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "eventbus",
   "main": "dist/vue-eventbus-toastcam.js",
   "scripts": {
