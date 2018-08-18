@@ -2,9 +2,9 @@
   "name": "vue-eventbus-toastcam",
   "version": "1.0.0",
   "description": "eventbus",
-  "main": "index.js",
+  "main": "dist/vue-clock.js",
   "scripts": {
-    "test": "test"
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,23 @@
   "bugs": {
     "url": "https://github.com/mskang9/vue-eventbus-toastcam/issues"
   },
-  "homepage": "https://github.com/mskang9/vue-eventbus-toastcam#readme"
+  "homepage": "https://github.com/mskang9/vue-eventbus-toastcam#readme",
+  "dependencies": {
+    "babel-loader": "^7.1.5",
+    "moment": "^2.22.2",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.1.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "path": "^0.12.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^14.2.2",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16"
+  }
 }
