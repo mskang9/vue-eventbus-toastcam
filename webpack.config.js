@@ -3,9 +3,9 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname + '/src/plugin.js'),
+    entry: path.resolve(__dirname + '/src/index.js'),
     output: {
-        filename: 'vue-clock.min.js'
+        filename: 'lib.js'
     },
     plugins: [
     ],
@@ -55,8 +55,5 @@ module.exports = {
                 loader: 'url-loader?limit=100000'
             }
         ]
-    },
-    externals: {
-        moment: 'moment'
     }
 };
