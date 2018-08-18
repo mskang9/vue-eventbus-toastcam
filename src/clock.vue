@@ -1,5 +1,8 @@
 <template>
-    <div></div>
+    <div>
+        <h2>Clock</h2>
+        <div>{{display}}</div>
+    </div>
 </template>
 <script>
     import moment from 'moment';

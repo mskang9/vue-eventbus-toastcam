@@ -2,7 +2,7 @@
   "name": "vue-eventbus-toastcam",
   "version": "1.0.0",
   "description": "eventbus",
-  "main": "dist/vue-clock.js",
+  "main": "dist/vue-clock.min.js",
   "scripts": {
     "build": "webpack -p"
   },
