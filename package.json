@@ -1,10 +1,10 @@
 {
   "name": "vue-eventbus-toastcam",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "eventbus",
-  "main": "dist/vue-component.js",
+  "main": "dist/vue-eventbus-toastcam.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --config webpack.config.js"
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
