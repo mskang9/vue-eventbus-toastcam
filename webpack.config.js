@@ -1,19 +1,13 @@
 var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var cssExtractor = ExtractTextPlugin.extract("css?sourceMap!postcss");
-var lessExtractor = ExtractTextPlugin.extract("css?sourceMap!postcss!less?sourceMap");
+var webpack = require('webpack');
+
+function resolve (dir) {
+    return path.join(__dirname, '..', dir)
+}
 
 module.exports = {
-    devtool: '#eval-sourcemap',
-    entry: ['./index'],
-    output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
-        filename: "vue-eventbus-toastcam.js"
-    },
-    resolve: {
-        extensions: ['.js', '.vue', '.json'],
-    },
+    entry: './src/index.js',
+
     module: {
         rules: [
             {
@@ -47,9 +41,42 @@ module.exports = {
             }
         ]
     },
-    babel: {"presets": ["es2015"]},
-    plugins: [
-        //new webpack.optimize.UglifyJsPlugin(),
-        //new ExtractTextPlugin("examples/[name].css")
-    ]
-};
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': resolve('src')
+        }
+    },
+    // default for pretty much every project
+    context: __dirname,
+    // specify your entry/main file
+    output: {
+        // specify your output directory...
+        path: path.resolve(__dirname, './dist'),
+        // and filename
+        filename: 'vue-confirm-msg.js'
+    }
+}
+
+
+
+if (process.env.NODE_ENV === 'production') {
+    module.exports.devtool = '#source-map'
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true
+        })
+    ])
+}
