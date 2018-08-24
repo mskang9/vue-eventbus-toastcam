@@ -1,9 +1,9 @@
 <template>
-    <div class="confirm_msg">
+    <div class="test_msg">
         <div class="dimmed"></div>
         <div class="content">
             <div class="message" v-html="pMessage"></div>
-            <div class="confirm_btn" v-on:click="closeDlg()">{{$t("STR_CONFIRM")}}</div>
+            <div class="confirm_btn" v-on:click="closeDlg()">테스트 메시지 컴포넌트</div>
         </div>
     </div>
 </template>
@@ -29,7 +29,7 @@
 </script>
 
 <style lang="less">
-    .confirm_msg {
+    .test_msg {
         .content{
             position:fixed;top:30%;left:40%;width:320px;height:184px;z-index:200;background:#fff;box-sizing:border-box;
             .message {

@@ -1,8 +1,8 @@
 {
   "name": "vue-eventbus-toastcam",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "eventbus",
-  "main": "dist/vue-confirm-msg.js",
+  "main": "src/components/test_msg.vue",
   "scripts": {
     "build": "webpack -p"
   },
